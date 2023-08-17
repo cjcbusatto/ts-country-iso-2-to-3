@@ -10,6 +10,10 @@ describe('getCountryISO3', () => {
     expect(getCountryISO3('BR')).toBe('BRA')
   })
 
+  it("should return 'CUW when 'CW' is passed", () => {
+    expect(getCountryISO3('CW')).toBe('CUW')
+  })
+
   it("should throw an error when 'XX' is passed", () => {
     expect(() => getCountryISO3('XX')).toThrowError(
       'No ISO3 reference was found for ISO2 "XX"'

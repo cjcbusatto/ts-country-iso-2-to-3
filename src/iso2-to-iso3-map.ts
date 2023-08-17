@@ -50,6 +50,7 @@ export const iso2ToIso3Map: Record<string, string> = {
   CX: 'CXR',
   CC: 'CCK',
   CO: 'COL',
+  CW: 'CUW',
   KM: 'COM',
   CG: 'COG',
   CD: 'COD',
