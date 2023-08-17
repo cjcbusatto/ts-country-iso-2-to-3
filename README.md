@@ -15,12 +15,12 @@ $ npm install ts-country-iso-2-to-3
 ## Usage
 
 ```ts
-import { getCountryISO3 } from "ts-country-iso-2-to-3";
+import { getCountryISO3 } from 'ts-country-iso-2-to-3'
 
-console.log(getCountryISO3("BR")) // BRA
-console.log(getCountryISO3("US")) // USA
-console.log(getCountryISO3("INVALID_ISO2")) // Error: No ISO3 reference was found for ISO2: "INVALID_ISO2"
-``` 
+console.log(getCountryISO3('BR')) // BRA
+console.log(getCountryISO3('US')) // USA
+console.log(getCountryISO3('INVALID_ISO2')) // Error: No ISO3 reference was found for ISO2: "INVALID_ISO2"
+```
 
 ## API
 
