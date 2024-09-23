@@ -1,6 +1,6 @@
 {
   "name": "ts-country-iso-2-to-3",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Convert a country code ISO 3166-1 Alpha-2 to ISO 3166-1 Alpha-3 with types!",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
