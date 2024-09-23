@@ -29,7 +29,29 @@ describe('getCountryISO3', () => {
     })
   })
 
-  it("should throw an error when an invalid code ('XX') is passed", () => {
+  it('should support the list of countries from iban.com in lower case', () => {
+    ibanDotComList.forEach((iso2) => {
+      expect(getCountryISO3(iso2.toLowerCase())).toBeDefined()
+    })
+  })
+
+  it('should throw an error when no country code is passed', () => {
+    expect(() => getCountryISO3('')).toThrowError('Country code is required')
+  })
+
+  it('should throw an error when a non-string value is passed', () => {
+    expect(() => getCountryISO3(123 as any)).toThrowError(
+      'Country code should be a string'
+    )
+  })
+
+  it('should throw an error when a code with more than 2 characters is passed', () => {
+    expect(() => getCountryISO3('USA')).toThrowError(
+      'Country code should be 2 characters long'
+    )
+  })
+
+  it("should throw an error when an invalid code 'XX' is passed", () => {
     expect(() => getCountryISO3('XX')).toThrowError(
       'No ISO3 reference was found for ISO2 "XX"'
     )
